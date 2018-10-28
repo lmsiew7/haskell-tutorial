@@ -2,5 +2,7 @@ module Lib
     ( someFunc
     ) where
 
+import Q1
+
 someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+someFunc = do q1
