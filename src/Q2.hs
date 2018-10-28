@@ -24,4 +24,4 @@ filterGender :: Student -> Bool
 filterGender (Student _ gender) = gender == "M"
 
 q2 :: IO ()
-q2 = putStrLn $ show $ filter filterGender students
+q2 = putStrLn $ "q2. " ++ (show $ filter filterGender students)
