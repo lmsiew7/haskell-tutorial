@@ -24,4 +24,4 @@ getGender :: Student -> String
 getGender (Student _ gender) = gender
 
 q1 :: IO ()
-q1 = putStrLn $ show $ map getGender students
+q1 = putStrLn $ "q1. " ++ (show $ map getGender students)
