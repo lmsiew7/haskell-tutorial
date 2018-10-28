@@ -9,19 +9,19 @@ data Student = Student
     String String
     deriving (Show)
 
-xxx :: [Student]
-xxx = [Student "A" "M",
-       Student "B" "F",
-       Student "C" "F",
-       Student "D" "M",
-       Student "E" "M",
-       Student "F" "F",
-       Student "G" "F",
-       Student "H" "F",
-       Student "I" "M"]
+students :: [Student]
+students = [Student "A" "M",
+           Student "B" "F",
+           Student "C" "F",
+           Student "D" "M",
+           Student "E" "M",
+           Student "F" "F",
+           Student "G" "F",
+           Student "H" "F",
+           Student "I" "M"]
 
-get :: Student -> String
-get (Student _ gender) = gender
+getGender :: Student -> String
+getGender (Student _ gender) = gender
 
 q1 :: IO ()
-q1 = putStrLn $ show $ map get xxx
+q1 = putStrLn $ show $ map getGender students
