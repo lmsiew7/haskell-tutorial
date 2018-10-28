@@ -1,6 +1,3 @@
-{-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE TypeSynonymInstances #-}
-
 module Q3
     ( q3
     ) where
@@ -21,8 +18,8 @@ students = [Student "A" "M",
            Student "I" "M"]
 
 filterGender :: Student -> Bool
-filterGender (Student _ gender) = gender == "M"
+filterGender (Student _ gender) = gender == "F"
 
 q3 :: IO ()
-q3 = putStrLn $ "q3. " ++ (show $ length (filter filterGender students))
+q3 = putStrLn $ "q3. " ++ (show $ length $ filter filterGender students)
 
