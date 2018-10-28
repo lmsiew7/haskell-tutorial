@@ -1,8 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TypeSynonymInstances #-}
 
-module Q1
-    ( q1
+module Q2
+    ( q2
     ) where
 
 data Student = Student
@@ -20,8 +20,8 @@ xxx = [Student "A" "M",
        Student "H" "F",
        Student "I" "M"]
 
-get :: Student -> String
-get (Student _ gender) = gender
+get :: Student -> Bool
+get (Student _ gender) = gender == "M"
 
-q1 :: IO ()
-q1 = putStrLn $ show $ map get xxx
+q2 :: IO ()
+q2 = putStrLn $ show $ filter get xxx
